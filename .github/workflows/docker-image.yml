@@ -17,6 +17,9 @@ jobs:
     - name: Build the Docker image
       run: docker build ./my-express-app --file ./my-express-app/Dockerfile --tag my-image-name:$(date +%s)
 
+    - name: Run Docker container
+      run: docker run -d -p 80:80 my-image-name
+    
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
 
