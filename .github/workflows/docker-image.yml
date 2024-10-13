@@ -16,3 +16,7 @@ jobs:
 
     - name: Build the Docker image
       run: docker build ./my-express-app --file ./my-express-app/Dockerfile --tag my-image-name:$(date +%s)
+
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@master
+
