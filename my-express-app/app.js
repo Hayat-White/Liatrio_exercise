@@ -1,13 +1,14 @@
 // Node.js Application
 const express = require('express');
 const app = express();
-app.set('json spaces', 0);  // Minify JSON output
+
 app.get('/', (req, res) => {
     const responseData = {
         message: 'My name is Hayat',
         timestamp: Math.floor(Date.now())
     };
-    res.json(responseData);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(responseData)); // Minified JSON
 });
 
 const PORT = 80;
