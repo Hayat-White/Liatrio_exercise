@@ -5,7 +5,7 @@ const app = express();
 app.get('/', (req, res) => {
     const responseData = {
         message: 'My name is Hayat',
-        timestamp: new Date().toISOString()
+        timestamp: Math.floor(Date.now() / 1000)
     };
     res.json(responseData);
 });
