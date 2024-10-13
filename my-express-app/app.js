@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/api/data', (req, res) => {
+app.get('/', (req, res) => {
     const responseData = {
         message: 'My name is Hayat',
         timestamp: new Date().toISOString()
