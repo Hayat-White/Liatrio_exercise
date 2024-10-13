@@ -1,7 +1,7 @@
 // Node.js Application
 const express = require('express');
 const app = express();
-
+app.set('json spaces', 0);  // Minify JSON output
 app.get('/', (req, res) => {
     const responseData = {
         message: 'My name is Hayat',
