@@ -23,8 +23,7 @@ jobs:
     - name: Add delay to ensure container readiness
       run: sleep 5
 
-    - name: Run tests excluding the last one
-      run: |
-        docker exec my-container npx mocha liatrio/github-actions/tree/master/apprentice-action/tests --grep "should return a minified JSON object." --invert
+    - name: Run tests excluding the last test
+      uses: ./run-tests-action  # Use your custom action here
       
 
