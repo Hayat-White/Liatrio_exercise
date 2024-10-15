@@ -23,6 +23,9 @@ jobs:
     - name: Verify Docker container is running
       run: docker ps -a  # Lists all running containers to verify the container is up
 
+    - name: Add delay to ensure container readiness
+      run: sleep 5
+
     
   test:
     runs-on: ubuntu-latest
