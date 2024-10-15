@@ -19,9 +19,6 @@ jobs:
 
     - name: Run Docker container
       run: docker run -d --name my-container -p 80:80 my-image-name
-    
-    - name: Verify Docker container is running
-      run: docker ps -a  # Lists all running containers to verify the container is up
 
     - name: Add delay to ensure container readiness
       run: sleep 5
@@ -34,7 +31,8 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-
+    - name: Verify Docker container is running
+      run: docker ps -a  # Lists all running containers to verify the container is up
     - name: Run tests with exclusions
       run: |
         docker exec my-container npx mocha liatrio/github-actions/apprentice-action/tests/endpoint.test.js --grep "should return a minified JSON object." --invert
