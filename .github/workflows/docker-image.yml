@@ -25,6 +25,6 @@ jobs:
 
     - name: Run tests excluding the last one
       run: |
-        docker exec my-container npx mocha liatrio/github-actions/apprentice-action/tests/ --grep "should return a minified JSON object." --invert
+        docker exec my-container npx mocha liatrio/github-actions/tree/master/apprentice-action/tests --grep "should return a minified JSON object." --invert
       
 
