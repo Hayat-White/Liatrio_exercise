@@ -20,6 +20,6 @@ jobs:
     - name: Run Docker container
       run: docker run -d -p 80:80 my-image-name
     
-    - name: run tests
-      uses: liatrio/github-actions/apprentice-action@master
-
+  run-tests:
+    needs: build
+    uses: liatrio/github-actions/apprentice-action@master
