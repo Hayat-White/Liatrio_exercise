@@ -18,7 +18,7 @@ jobs:
       run: docker build ./my-express-app --file ./my-express-app/Dockerfile --tag my-image-name:latest
 
     - name: Run Docker container
-      run: docker run -d --name web_api -p 80:80 my-image-name
+      run: docker run -d --name my-container -p 80:80 my-image-name
     
   test:
     runs-on: ubuntu-latest
@@ -30,6 +30,6 @@ jobs:
 
     - name: Run tests with exclusions
       run: |
-        docker exec web_api npx mocha liatrio/github-actions/apprentice-action/tests/endpoint.test.js --grep "should return a minified JSON object." --invert
+        docker exec my-container npx mocha liatrio/github-actions/apprentice-action/tests/endpoint.test.js --grep "should return a minified JSON object." --invert
       
 
