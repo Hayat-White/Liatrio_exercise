@@ -1,0 +1,7 @@
+name: Run Tests
+
+description: "Runs tests while excluding the last test"
+
+runs:
+  using: "node12"
+  main: "index.js"
