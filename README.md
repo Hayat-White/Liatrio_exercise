@@ -1,13 +1,24 @@
-# Liatrio_exercise
+#Liatrio Node.js Application with Docker and GitHub Actions
 
-Create a simple web application docker containerized
-    
-    
--run command : docker build -t simple-endpoint
+This is a basic Node.js application that serves a message at an endpoint. The repository uses Docker for containerization and GitHub Actions to automate testing and deployment to Docker Hub.
 
--run command : docker run -p 80:80 simple-endpoint
+## Features
 
-Application exposes HTTP API endpoint
+- **Node.js Application**: A simple Express.js server that returns a JSON message with a name and timestamp.
+- **Dockerized**: The application is packaged into a Docker container for easy deployment.
+- **GitHub Actions**: Continuous integration pipeline that tests the application and pushes the Docker image to Docker Hub upon successful tests.
 
-Containerize and deploy to cloud platform
+## Prerequisites
 
+Before running this project, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [Docker](https://www.docker.com/)
+- A [Docker Hub](https://hub.docker.com/) account
+
+## Setup and Running the Application
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/hayat-white/Liatrio_exercise.git
+   cd Liatrio_exercise
