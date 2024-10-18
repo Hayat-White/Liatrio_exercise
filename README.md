@@ -39,7 +39,6 @@ The application will be running on http://localhost:80.
    ```bash
    docker build -t your-dockerhub-username/my-image-name .
 
-
 2. **Run the Docker container**:
    ```bash
    docker run -p 80:80 your-dockerhub-username/my-image-name
@@ -57,7 +56,6 @@ The application will now be accessible at http://localhost:80.
    docker tag your-dockerhub-username/my-image-name:latest
    docker push your-dockerhub-username/my-image-name:latest
 
-
 ## GitHub Actions CI/CD Pipeline
 
 **This repository is configured with a CI/CD pipeline using GitHub Actions. The pipeline will:**
@@ -65,7 +63,7 @@ The application will now be accessible at http://localhost:80.
 2. **Build the Docker image** from the provided Dockerfile.
 3. **Run the application** in a Docker container.
 4. **Run tests** using the pre-configured test suite.
-5. **Push the Docker image **to Docker Hub if the tests pass.
+5. **Push the Docker image** to Docker Hub if the tests pass.
 
 The pipeline is triggered automatically on pushes or pull requests to the main branch.
    
