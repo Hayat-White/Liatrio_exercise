@@ -1,4 +1,4 @@
-#Liatrio Node.js Application with Docker and GitHub Actions
+# Liatrio Node.js Application with Docker and GitHub Actions
 
 This is a basic Node.js application that serves a message at an endpoint. The repository uses Docker for containerization and GitHub Actions to automate testing and deployment to Docker Hub.
 
