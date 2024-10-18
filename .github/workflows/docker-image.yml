@@ -13,12 +13,20 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+    
+    
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
 
     - name: Build the Docker image
       run: docker build ./my-express-app --file ./my-express-app/Dockerfile --tag my-image-name:latest
 
     - name: Run Docker container
       run: docker run -d --name my-container -p 80:80 my-image-name
+
+    - name: Push Docker image to Docker Hub
+      run: docker push killerpear/liatrio_exercise:latest
 
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@0b41561cca6822cc8d880fe0e49e7807a41fdf91
