@@ -25,10 +25,8 @@ jobs:
     - name: Run Docker container
       run: docker run -d --name my-container -p 80:80 killerpear/liatrio_exercise:latest
 
-    - name: Push Docker image to Docker Hub
-      run: docker push killerpear/liatrio_exercise:latest
-
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@0b41561cca6822cc8d880fe0e49e7807a41fdf91
       
-
+    - name: Push Docker image to Docker Hub
+      run: docker push killerpear/liatrio_exercise:latest
